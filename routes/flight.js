@@ -39,6 +39,7 @@ router.get('/flight/:id', (req, res, next) => {
 });
 
 
+
 router.post('/flight', (req, res, next) => {
 	// console.log(req.body)
 	const { airportSource, airportDestination, departureDate, ArrivingDate,tickets,classs,airlineName} = req.body

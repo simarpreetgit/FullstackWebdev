@@ -1,29 +1,43 @@
+<br><br>
 <h1>Add a Flight to the list</h1>
-
+<br><br>
 <form action="/flight" method="POST">
 	<label for="">AirportSource:</label>
 	<input type="text" name="airportSource">
- 
+ <br><br>
    <label for="">AirportDestination:</label>
 	<input type="text" name="airportDestination">
-
+<br><br>
      <label for="">DepartureDate:</label>
 	<input type="date" name="departureDate">
+<br><br>
 
-    <label for="">ArrivingDate:</label>
-	<input type="date" name="ArrivingDate">
-
-     <label for="">Classs:</label>
-	<input type="text" name="classs">
-
-	<label for="">tickets:</label>
+	<label for="Class:">Class</label>
+<select name="classs">
+  <option value="Economy">Economy</option>
+  <option value="Business">Business</option>
+  <option value="First">First</option>
+</select>
+<br><br>
+	<label for="">Tickets:</label>
 	{{!-- <input type="text" name="author"> --}}
 	<select name="tickets">
 		{{#each tickets}}
 			<option value="{{_id}}">Seat number:{{seat}} price:{{price}}</option>
 		{{/each}}     
 	</select>
-     <label for="">AirlineName:</label>
-	<input type="text" name="airlineName">
-	<button type="submit">Add this flight</button>
+	<br><br>
+	<label for="AirlineName:">AirlineName:</label>
+<select name="airlineName">
+  <option value="Emirates Airline">Emirates Airline</option>
+  <option value="British Airways">British Airways</option>
+  <option value="Lufthansa">Lufthansa</option>
+  <option value="Ryanair">Ryanair</option>
+</select>
+
+
+     {{!-- <label for="">AirlineName:</label>
+	<input type="text" name="airlineName"> --}}
+	<br><br>
+	<button type="submit">Add flight</button>
 </form>

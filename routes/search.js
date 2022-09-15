@@ -13,6 +13,7 @@ router.get('/searchbar',(req,res)=>{
 router.get('/flightsearch',(req,res,next)=>{
   const queryString1 = req.query.q1
   const queryString2 = req.query.q2
+  const queryString3 = req.query.q3
   let result = []
   //console.log(queryString1,queryString2)
   Flight.find({})
@@ -20,7 +21,7 @@ router.get('/flightsearch',(req,res,next)=>{
 
     for(let flight of flightsfromdtabase )
     {
-      if(flight.airportSource.includes(queryString1) && flight.airportDestination.includes(queryString2) )
+      if(flight.airportSource.includes(queryString1) && flight.airportDestination.includes(queryString2) && flight.departureDate.getDate(queryString3) )
       {
       result.push(flight)
       }
