@@ -13,17 +13,28 @@
 	<label for="">departureDate:</label>
 	<input type="date" name="departureDate" value="{{flightt.departureDate}}">
 <br><br>
-    {{!-- <label for="">ArrivingDate:</label>
-	<input type="date" name="ArrivingDate" value="{{flightt.ArrivingDate}}"> --}}
-
-	<label for="">classs:</label>
+   
+   <label for="Class:">Class</label>
+<select name="classs" value="{{flightt.classs}}">
+  <option value="Economy">Economy</option>
+  <option value="Business">Business</option>
+  <option value="First">First</option>
+</select>
+<br><br>
+	{{!-- <label for="">classs:</label>
 	<input type="text" name="classs" value="{{flightt.classs}}">
 
-	<br><br>
-   
+	<br><br> --}}
+   <label for="AirlineName:">AirlineName:</label>
+<select name="airlineName" value="{{flightt.airlineName}}">
+  <option value="Emirates Airline">Emirates Airline</option>
+  <option value="British Airways">British Airways</option>
+  <option value="Lufthansa">Lufthansa</option>
+  <option value="Ryanair">Ryanair</option>
+</select>
     
-  <label for="">AirlineName:</label>
-	<input type="text" name="airlineName" value="{{flightt.airlineName}}">
+  {{!-- <label for="">AirlineName:</label>
+	<input type="text" name="airlineName" value="{{flightt.airlineName}}"> --}}
 	<br><br>
 
 	<button type="sumbmit">Update</button>
