@@ -1,0 +1,27 @@
+<h1> 🛫 Edit the flights 🛬 </h1>
+
+
+<form action="/flight/edit/{{flightt._id}}" method="POST">
+	<label for="">AirportSource: </label>
+	<input type="text" name="airportSource" value="{{flightt.airportSource}}">
+
+	<label for="">airportDestination: </label>
+	<input type="text" name="airportDestination" value="{{flightt.airportDestination}}">
+
+	<label for="">departureDate:</label>
+	<input type="date" name="departureDate" value="{{flightt.departureDate}}">
+
+    {{!-- <label for="">ArrivingDate:</label>
+	<input type="date" name="ArrivingDate" value="{{flightt.ArrivingDate}}"> --}}
+
+	<label for="">classs:</label>
+	<input type="text" name="classs" value="{{flightt.classs}}">
+
+	
+   
+    
+  <label for="">AirlineName:</label>
+	<input type="text" name="airlineName" value="{{flightt.airlineName}}">
+
+	<button type="sumbmit">Update</button>
+</form>

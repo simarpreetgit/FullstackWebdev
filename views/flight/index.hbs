@@ -1,0 +1,8 @@
+<h1>All the Flights ✈️ </h1>
+{{#each flights}}
+	<div>
+		<a href="/flight/{{_id}}">{{airportSource}} {{airportDestination}}</a>
+	</div>
+{{/each}}
+<br><br>
+<a href="/flight/add">Add a flight here 🛫</a>

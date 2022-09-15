@@ -1,0 +1,29 @@
+<h1>Add a Flight to the list</h1>
+
+<form action="/flight" method="POST">
+	<label for="">AirportSource:</label>
+	<input type="text" name="airportSource">
+ 
+   <label for="">AirportDestination:</label>
+	<input type="text" name="airportDestination">
+
+     <label for="">DepartureDate:</label>
+	<input type="date" name="departureDate">
+
+    <label for="">ArrivingDate:</label>
+	<input type="date" name="ArrivingDate">
+
+     <label for="">Classs:</label>
+	<input type="text" name="classs">
+
+	<label for="">tickets:</label>
+	{{!-- <input type="text" name="author"> --}}
+	<select name="tickets">
+		{{#each tickets}}
+			<option value="{{_id}}">Seat number:{{seat}} price:{{price}}</option>
+		{{/each}}     
+	</select>
+     <label for="">AirlineName:</label>
+	<input type="text" name="airlineName">
+	<button type="submit">Add this flight</button>
+</form>
